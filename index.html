@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispalma</title>
+    <link rel="stylesheet" href="css/cabecera.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pie.css">
+
+    <!-- script para uso de EMAILJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- script pare el envío con EMAILJS sin campo mensaje -->
+    <script src="script/sin_mensaje.js"></script>
+</head>
+<body>
+    <div id="miHeader"></div>
+    <main>
+        <div class="teapr">
+            <p class="teaprTxt1">Tu empresa a pleno <br>rendimiento</p>
+            <p class="teaprTxt2">Nos ocupamos de que tu equipamiento esté siempre optimizado.</p>
+            <p class="teaprTxt3">¿En que podemos ayudarte?</p>
+        </div>
+        <div class="img1">
+            <a href="mantto.html"><img class="servImg" src="multimedia/imagenes/mant_informatico.jpg" alt="img.mant."></a>
+            <a href="mantto.html">
+                <p class="imgP1">Mantenimiento informático</p>
+            </a>
+            <p class="imgP2">El mejor servicio para mantener tus<br>equipos actualizados y en<br>funcionamiento.</p>
+        </div>    
+        <div class="img2">
+            <a href="ordenadores.html"><img class="servImg" src="multimedia/imagenes/computers.jpg" alt="img.computer"><a href=""></a>
+            <a href="ordenadores.html">
+                <p class="imgP1">Ordenadores</p>
+            </a>
+            <p class="imgP2">Venta y reparación de ordenadores<br>portátiles, sobremesa y servidores.</p>
+        </div>
+        <div class="img3">    
+            <a href="redes.html"><img class="servImg" src="multimedia/imagenes/redes.jpg" alt="img.redes"><a href=""></a>
+            <a href="redes.html">
+                <p class="imgP1">Redes y comunicaciones</p>
+            </a>    
+            <p class="imgP2">Cableado y dispositivos de red,<br>armarios rack, megafonía…</p>
+        </div>
+        <div class="img4">
+            <a href="sisimpres.html"><img class="servImg" src="multimedia/imagenes/printer.jpg" alt="img.impresora"><a href=""></a>
+            <a href="sisimpres.html">
+                <p class="imgP1">Impresión</p>
+            </a>    
+            <p class="imgP2">Asesoramiento profesional para<br>optimizar los costes de impresión.</p>
+        </div>
+        <div class="img5">    
+            <a href="audiovisual.html"><img class="servImg" src="multimedia/imagenes/audiovisuales.jpg" alt="img.audiovis."><a href=""></a>
+            <a href="audiovisual.html">
+                <p class="imgP1">Audiovisuales</p>
+            </a>   
+            <p class="img5P2">Todo lo que necesitas para tu sala de<br>comunicaciones.</p>
+        </div>
+        <div class="img6">
+            <a href="oficina.html"><img class="servImg" src="multimedia/imagenes/gadgets.jpg" alt="img.mat.oficina"><a href=""></a>
+            <a href="oficina.html">
+                <p class="imgP1">Material de oficina</p>
+            </a>    
+            <p class="img6P2">Equipos y suministros de papelería para<br>tu empresa o centro educativo.</p>
+        </div>
+    </main>
+    <div id="miPie"></div>
+    <script>
+        function loadHeader() {
+                // Intentar cargar el archivo de cabecera
+                fetch('cabecera.html')
+                    .then(response => {
+                        // Verificar si la respuesta es exitosa
+                        if (!response.ok) {
+                            throw new Error(`Error al cargar la cabecera: ${response.statusText}`);
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        // Insertar el contenido de header.html en el div
+                        document.getElementById('miHeader').innerHTML = data;
+                    })
+                    .catch(error => {
+                        // Manejar errores
+                        console.error('Hubo un problema al cargar la cabecera:', error);
+                        document.getElementById('miHeader').innerHTML = `
+                            <p style="color: red;">Lo sentimos, hubo un error al cargar la cabecera.</p>
+                        `;
+                    });
+            }
+            // Llamar a la función para cargar la cabecera
+            loadHeader();
+    </script>
+
+    <script>
+        function loadFoot() {
+            // Intentar cargar el archivo de pie
+            fetch('pie.html')
+                .then(response => {
+                    // Verificar si la respuesta es exitosa
+                    if (!response.ok) {
+                        throw new Error(`Error al cargar la cabecera: ${response.statusText}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    // Insertar el contenido de header.html en el div
+                    document.getElementById('miPie').innerHTML = data;
+                })
+                .catch(error => {
+                    // Manejar errores
+                    console.error('Hubo un problema al cargar el pie de página:', error);
+                    document.getElementById('miPie').innerHTML = `
+                        <p style="color: red;">Lo sentimos, hubo un error al cargar la cabecera.</p>
+                    `;
+                });
+        }
+        // Llamar a la función para cargar la cabecera
+        loadFoot();
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacto</title>
+        <link rel="stylesheet" href="css/cabecera.css">
+        <link rel="stylesheet" href="css/pie.css">
+        <link rel="stylesheet" href="css/contacto.css">
+    </head>
+    <body onload="document.getElementById('mensaje').value = ''">
+        <div id="miHeader"></div>
+        <div class="contenedor">
+            <div class="cabeTitle"> 
+                <div class="fondoCabecera"></div>  
+                <div class="contTitle">
+                    <p >Contacta con nosotros</p>
+                </div>
+            </div>    
+            <div class="imagenes">   
+                    <article class="phone">
+                        <img class="imgPhone" src="multimedia/imagenes/mobil.svg" alt="Img.Telefono">
+                            <p class="pieImagen">Teléfono: +34 971 609 988</p>
+                    </article>
+                    <article class="mail">
+                        <img class="imgMail" src="multimedia/imagenes/sobre.svg" alt="Img.Mail">
+                        <p class="pieImagen">Email: <a href="#">info@dispalma.com</a></p>
+                    </article>
+                </article>    
+            </div>    
+            <p class="contTitle1">Contacto</p>
+            <div class="contact">    
+                <div class="contForm">
+                    <form id="formulario1">
+                        <input type="text" id="nombre1" name="name" required placeholder="Nombre (*)">
+                        <input type="email" id="email1" name="email" required  placeholder="Mail (*)">
+                        <input type="telf" id="telefono1" name="telefono" placeholder="Teléfono">
+                        <textarea name="mensaje" 
+                                id="mensaje" 
+                                placeholder="Tus comentarios...(*)" 
+                                rows="5">
+                        </textarea>
+                        <button type="submit" id="btoEnvio" onclick="sendMail()">Enviar mensaje</button>
+                    </form>    
+                </div>
+                <div class="contPregunta">
+                    <img class="imgInterroga" src="multimedia/imagenes/interroga.svg" alt="img.interrogacíon">    
+                    <p class="pregTitle">¿En qué podemos ayudarte?</p>
+                    <p class="pregDetalle">En Dispalma te ayudamos en todo lo que necesites relacionado con el equipamiento de material informático empresarial y asistencia técnica <br>
+                        <br>
+                    Además, somos especialistas en material de oficina para empresa y centros educativos. Solicita presupuesto sin compromiso. <br><br>
+                    Contacta con nosotros y te ayudaremos con la mayor brevedad.
+                    </p>
+                </div> 
+            </div>
+        </div>       
+        <div id="miPie"></div>
+        <script>
+            function loadHeader() {
+                    // Intentar cargar el archivo de cabecera
+                    fetch('cabecera.html')
+                        .then(response => {
+                            // Verificar si la respuesta es exitosa
+                            if (!response.ok) {
+                                throw new Error(`Error al cargar la cabecera: ${response.statusText}`);
+                            }
+                            return response.text();
+                        })
+                        .then(data => {
+                            // Insertar el contenido de header.html en el div
+                            document.getElementById('miHeader').innerHTML = data;
+                        })
+                        .catch(error => {
+                            // Manejar errores
+                            console.error('Hubo un problema al cargar la cabecera:', error);
+                            document.getElementById('miHeader').innerHTML = `
+                                <p style="color: red;">Lo sentimos, hubo un error al cargar la cabecera.</p>
+                            `;
+                        });
+                }
+                // Llamar a la función para cargar la cabecera
+                loadHeader();
+        </script>
+    
+        <script>
+            function loadFoot() {
+                // Intentar cargar el archivo de pie
+                fetch('pie.html')
+                    .then(response => {
+                        // Verificar si la respuesta es exitosa
+                        if (!response.ok) {
+                            throw new Error(`Error al cargar el pie de página: ${response.statusText}`);
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        // Insertar el contenido de header.html en el div
+                        document.getElementById('miPie').innerHTML = data;
+                    })
+                    .catch(error => {
+                        // Manejar errores
+                        console.error('Hubo un problema al cargar el pie de página:', error);
+                        document.getElementById('miPie').innerHTML = `
+                            <p style="color: red;">Lo sentimos, hubo un error al cargar la cabecera.</p>
+                        `;
+                    });
+            }
+            // Llamar a la función para cargar la cabecera
+            loadFoot();
+        </script>
+    </body>
+</html>    
+
+
+
+
+
+

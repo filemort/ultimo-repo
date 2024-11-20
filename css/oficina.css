@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    overflow-x: hidden;
+    width: 100%;
+}   
+.imgFondo{
+    position:relative;
+    width: 100%;
+    height: 40rem;
+    margin-top: 5rem;
+    opacity: 0.3;
+}
+.ofTitle{
+    display: flex;
+    justify-content: center;
+    margin-top: -30rem;
+    font-size: 4rem;
+    font-weight: bold;
+
+}
+.ofStles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.ofSbt1{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.ofSbt2{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2.8rem;
+    font-size: 1.5rem;
+}
+.preBoton{
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+.ofBoton{
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    box-shadow: .3rem .3rem .2rem .2rem rgb(150, 127, 179);
+    height: 3rem;
+    width: 20rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    margin-top: 1rem;
+    margin-bottom: 1.8rem;
+    margin-left: 35rem;
+}
+.ofBoton:hover{
+    background: aquamarine ;
+}
+
+@media (max-width: 600px){
+    .imgFondo{
+        height: 35rem;
+    }
+    .ofTitle{
+        margin-top: -25rem;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .ofSbt1{
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+    .ofSbt2{
+        font-size: .9rem;
+    }
+    .ofBoton{
+        font-size: 1rem;
+        width: 15rem;
+        margin-left: 10rem;
+    }
+}

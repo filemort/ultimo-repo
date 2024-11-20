@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    overflow-x: hidden;
+    width: 100%;
+}   
+.eqFondo{
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    background-image:url("../multimedia/imagenes/fondoequipos.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    width:100%;
+}
+.eqTitles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 2rem;
+}
+.eqTitle{
+    font-size: 6rem;
+    margin-top: -15rem;
+}
+.eqStles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.eqSbt1{
+    font-size: 2rem;
+}
+.eqHr{
+    margin-top: .5rem;
+    width: 60rem;
+}
+.eqSbt2{
+    font-size: 1.2rem;
+    margin-top: .5rem;
+}
+.eqcontainer{
+    display: grid;
+    grid-template-areas: 
+        "comp print scan labe"
+        "dest plast encu pape";
+    gap: 3rem;
+    margin-top: 5rem;
+}
+.eqArt1{
+    grid-area: comp;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.eqimg{
+    width: 15rem;
+    border-radius: 10rem;
+
+}
+.eqArt2{
+    grid-area: print;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.eqArt3{
+    grid-area: scan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.eqArt4{
+    grid-area: labe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.eqArt5{
+    grid-area: dest;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.eqArt6{
+    grid-area: plast;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.eqArt7{
+    grid-area: encu;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.eqArt8{
+    grid-area: pape;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.eqBoton{
+    display: flex;
+    justify-content: center;
+    border: 2px solid;
+    border-radius: 20rem;
+    box-shadow: .2rem .3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 35rem;
+    width: 24.7rem;
+    height: 2.5rem;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.eqBoton:hover{
+    background-color: aquamarine;
+}
+@media (max-width: 600px){
+    .eqTitle{
+        font-size: 5rem;
+        padding-top: 2rem;
+    }
+    .eqSbt1{
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+    .eqSbt2{
+        font-size: .9rem;
+    }
+    .eqcontainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .eqTxtArt{
+        margin-top: .8rem;
+    }
+    .eqBoton{
+        margin-left: 8rem;
+        font-size: 1.2rem;
+        width: 15rem;
+        height: 2rem;
+
+    }
+
+}

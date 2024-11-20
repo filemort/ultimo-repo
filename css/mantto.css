@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    overflow-x: hidden;
+    width: 100%;
+    
+}    
+.container1{
+    position: relative;
+    display:grid;
+    grid-template-columns: 55vw;
+    grid-template-areas:
+        "titulo  titulo"
+        "txtSubt txtSubt "
+        "txtFoto foto"
+        "pieFoto pieFoto";
+    gap: .5rem;
+    background-color:burlywood;
+}
+.titulo{
+    grid-area:titulo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: 5em;
+    background-image:url("../multimedia/imagenes/mantenimiento.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+    margin-top: 2em;
+}
+.txtSubt{
+    grid-area:txtSubt;
+    font-size: 3rem;
+    padding-left: 1.6em;
+}
+.txtFoto{
+    grid-area: txtFoto;
+    font-size: 1.1rem;
+    margin-left: 4.5em;
+    text-align:justify;
+    width: 35em;
+
+}    
+.foto{
+    grid-area: foto;
+    margin-top: 2.5em;
+    width: 34em;
+    border-radius: 2rem;
+    border: 4px solid rgb(10, 23, 168);
+    border-style:outset;
+}
+.pieFoto{
+    grid-area: pieFoto ;
+    margin: 3rem 0 0 5rem;
+    font-weight: bold;
+}
+.container2{
+    display:grid;
+    grid-template-areas:
+        "pack  bono"
+        "mainfo mainfo";
+    gap: 3rem;
+    grid-template-columns: 23em 20em;
+    background-color:lightgray;
+    border: 2px solid;
+    border-radius: 10px;
+    padding-left: 2.5rem;
+    margin: 4rem 0 4rem 44vh;
+    justify-content: center;
+    width: 110%;
+}
+.pHoras{
+    grid-area: pack;
+}
+.pack, .bono{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+.bMensual{
+    grid-area: bono;
+}
+.spakTxt1, .sbonoTxt1{
+    font-weight: bold;
+    font-size: .9rem;
+    margin-top: 1rem;
+}
+.spakTxt2, .sbonoTxt2{
+    margin-top: 1rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.packList, .bonoList{
+    margin-top: .5rem ;
+    font-size: .8rem;
+}
+.listStyl{
+    list-style:disc;
+}
+.mainfo{
+    justify-content: center;
+    font-weight: bold;
+}
+.mainfo:hover{
+    color:blue
+}
+
+@media (max-width: 600px){
+    .container1{
+        display:flex;
+        flex-direction: column;
+    }
+    .titulo{
+        width:30.2rem;
+        font-size: 3.7rem;
+        padding-top: 3.5rem;
+    }
+    .txtSubt{
+        font-size: 2rem;
+        padding-left: 1.2rem;
+    } 
+    .txtFoto{
+        margin-left: 1.3rem;
+        font-size: .9rem;
+    }  
+    .foto{
+        margin-left: 2.5rem;
+        width: 25rem;
+    }
+    .pieFoto{
+        margin: 3rem 0 0 3rem;
+        font-weight: bold;
+    }
+    .container2{
+        display: flex;
+        flex-direction: column;
+        padding-left: 2.5rem;
+        margin: 4rem 0 4rem 2.8rem;
+        justify-content: center;
+        width: 25rem;
+    }
+    .pack, .bono{
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-left: -3rem;
+
+    }
+}

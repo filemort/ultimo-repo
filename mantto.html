@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento informático</title>
+    <link rel="stylesheet" href="css/cabecera.css">
+    <link rel="stylesheet" href="css/mantto.css">
+    <link rel="stylesheet" href="css/pie.css">
+</head>
+<body onload="document.getElementById('mensaje').value = ''">
+    <div id="miHeader"></div>
+    <main>
+        <div class="container1">
+            <div class="titulo">
+                Mantenimiento<br> 
+                Informático</p>
+            </div>
+            <p class="txtSubt">La importancia de que <br>
+                todo funcione</p>
+            <p class="txtFoto">
+                Un día normal en la oficina y, de repente… no se enciende el<br> ordenador, la conexión de Internet es extremadamente lenta,<br> se desconfigura el escáner o la impresora se atasca…  el caos <br> empieza a imperar, alguien intenta solucionarlo (sin éxito) ¿el <br> resultado? prácticamente una mañana perdida y el trabajo <br> acumulándose. <br><br>
+                Si alguna vez te has encontrado con esta situación (vale, igual <br> no va a pasar todo a la vez) sabrás que puede llegar a ser una <br> pesadilla porque el trabajo diario se ve afectado y/o  <br> interrumpido por estas circunstancias. Por ello, ante cualquiera <br> de estos problemas, resulta muy práctico contar con un servicio <br> técnico al que solo hará falta una llamada para que se encargue <br> de todo de una manera ágil y eficiente.
+                <br><br>
+                Nuestro departamento técnico te dará soporte en todas <br> aquellas áreas relacionadas con la informática, impresión y <br> audiovisuales. Siempre con un trato personal, rápido y eficaz. 
+            </p>
+            <img class="foto" src="multimedia/imagenes/mant_informatico.jpg" alt="img.mtto.">
+            <p class="pieFoto">
+                DESCUBRE LAS VENTAJAS DE DISPONER DE UN DEPARTAMENTO DE SOPORTE INFORMÁTICO <br>INTEGRADO EN TU EMPRESA. GRACIAS A NUESTROS PLANES DE MANTENIMIENTO.
+            </p>
+            <div class="container2">
+                <article class="pHoras">
+                    <p class="pack">Pack de horas</p>
+                    <p class="spakTxt1">
+                        Contrata un pack desde 10 horas de mano <br> de obra y con hasta un 25% de descuento. 
+                    </p>
+                    <p class="spakTxt2">
+                    El pack incluye:
+                    </p>
+                    <ul class="packList">
+                        <li class="listStyl">
+                            Mano de obra por las horas contratadas para <br>reparaciones, instalaciones y puesta a punto y <br> mejora de equipos
+                        </li>
+                        <li class="listStyl">
+                            Desplazamientos gratuitos
+                        </li>
+                        <li class="listStyl">
+                            Atención preferente
+                        </li>
+                        <li class="listStyl">
+                            Asistencia remota o in situ, según sea necesario
+                        </li>
+                        <li class="listStyl">
+                            Gestión y asesoramiento informáticos
+                        </li>    
+                        <li class="listStyl">
+                            Descuentos en sustitución de piezas
+                        </li>    
+                        <li class="listStyl">
+                            Descuentos en nuevos equipos y periféricos
+                        </li>  
+                    </ul>
+                </article>  
+                <article class="bMensual">
+                    <p class="bono">Bono mensual</p>
+                    <p class="sbonoTxt1">
+                        Con el bono mensual, dispondrás de un servicio técnico ilimitado, por un precio fijo al mes.
+                    </p>
+                    <p class="sbonoTxt2">
+                    El bono incluye:
+                    </p>
+                    <ul class="bonoList">
+                        <li class="listStyl">
+                            Mano de obra ilimitada para reparaciones, <br> instalaciones y puesta a punto y mejora de <br>equipos
+                        <li class="listStyl">
+                            Desplazamientos gratuitos
+                        </li>
+                        <li class="listStyl">
+                            Atención preferente
+                        </li>
+                        <li class="listStyl">
+                            Asistencia remota o in situ, según sea <br> necesario
+                        </li>
+                        <li class="listStyl">
+                            Gestión y asesoramiento informáticos
+                        </li>    
+                        <li class="listStyl">
+                            Descuentos en sustitución de piezas
+                        </li>    
+                        <li class="listStyl">
+                            Descuentos en nuevos equipos y periféricos
+                        </li>  
+                    </ul>
+                </article>  
+                    <a class="mainfo" href="#">
+                        SOLICITA MÁS INFORMACIÓN
+                    </a>
+            </div>
+        </div>
+    </main>    
+    <div id="miPie"></div>
+
+    <script>
+        function loadHeader() {
+                // Intentar cargar el archivo de cabecera
+                fetch('cabecera.html')
+                    .then(response => {
+                        // Verificar si la respuesta es exitosa
+                        if (!response.ok) {
+                            throw new Error(`Error al cargar la cabecera: ${response.statusText}`);
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        // Insertar el contenido de header.html en el div
+                        document.getElementById('miHeader').innerHTML = data;
+                    })
+                    .catch(error => {
+                        // Manejar errores
+                        console.error('Hubo un problema al cargar la cabecera:', error);
+                        document.getElementById('miHeader').innerHTML = `
+                            <p style="color: red;">Lo sentimos, hubo un error al cargar la cabecera.</p>
+                        `;
+                    });
+            }
+            // Llamar a la función para cargar la cabecera
+            loadHeader();
+    </script>
+
+    <script>
+        function loadFoot() {
+            // Intentar cargar el archivo de pie
+            fetch('pie.html')
+                .then(response => {
+                    // Verificar si la respuesta es exitosa
+                    if (!response.ok) {
+                        throw new Error(`Error al cargar el pie de página: ${response.statusText}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    // Insertar el contenido de header.html en el div
+                    document.getElementById('miPie').innerHTML = data;
+                })
+                .catch(error => {
+                    // Manejar errores
+                    console.error('Hubo un problema al cargar el pie de página:', error);
+                    document.getElementById('miPie').innerHTML = `
+                        <p style="color: red;">Lo sentimos, hubo un error al cargar la cabecera.</p>
+                    `;
+                });
+        }
+        // Llamar a la función para cargar la cabecera
+        loadFoot();
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiovisuales</title>
+    <link rel="stylesheet" href="css/cabecera.css">
+    <link rel="stylesheet" href="css/audiovisual.css">
+    <link rel="stylesheet" href="css/pie.css">
+</head>
+<body onload="document.getElementById('mensaje').value = ''">
+    <div id="miHeader"></div>
+    <div class="auFondo">
+        <img class="imgFondo" src="multimedia/imagenes/audiovisuales.jpg" alt="img.audiovisuales">
+
+    </div>
+    <div class="auTitles">
+        <p class="auTitle">Audiovisual</p>
+    </div>    
+    <div class="auStles">
+        <p class="auSbt1">Trabajamos con todo tipo de equipamiento audiovisual</p>
+        <p class="auSbt2">Asesoramiento, presupuestos, venta, instalaciones y mantenimiento</p>
+        <p class="auSbt2">* Estamos especializados en servicio a centros escolares *</p>
+    </div>
+    <main class="auConten">
+        <article class="proye">
+            <p class="auCntTxt">Proyectores</p>
+            <img class="auImgProye" src="multimedia/imagenes/auImgProyector.jpg" alt="img.proyector">
+            <p class="auCntTxt1">Proyectores digitales con todo tipo de soportes, anclajes y distancias de proyección.</p>
+        </article>
+        <article class="pizar">
+            <p class="auCntTxt">Pizarras digitales interactivas</p>
+            <img class="auImgPizarra" src="multimedia/imagenes/auImgPizarra.jpg" alt="img.pizarra">
+            <p class="auCntTxt1">Pizarras interactivas con conectividad avanzada (HDMI, DisplayPort, inalámbricas). <br><br>
+            <p class="auCntTxt1">Software de gestión que permite el control total sobre el contenido mostrado.</p>   
+        </article>
+        <article class="audio">
+            <p class="auCntTxt">Audio</p>
+            <img class="auImgAudio" src="multimedia/imagenes/auImgAudio.jpg" alt="img.audio">
+            <p class="auCntTxt1">Instalamos sistemas de megafonía para anuncios/comunicaciones.</p>
+        </article>
+        <button class="auBoton" >   
+            <a class="auInfoBoton" href="contacto.html">+ INFO: Contáctanos</a>
+        </button> 
+    </main>
+    <div id="miPie"></div>
+    <script>
+        function loadHeader() {
+                // Intentar cargar el archivo de cabecera
+                fetch('cabecera.html')
+                    .then(response => {
+                        // Verificar si la respuesta es exitosa
+                        if (!response.ok) {
+                            throw new Error(`Error al cargar la cabecera: ${response.statusText}`);
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        // Insertar el contenido de header.html en el div
+                        document.getElementById('miHeader').innerHTML = data;
+                    })
+                    .catch(error => {
+                        // Manejar errores
+                        console.error('Hubo un problema al cargar la cabecera:', error);
+                        document.getElementById('miHeader').innerHTML = `
+                            <p style="color: red;">Lo sentimos, hubo un error al cargar la cabecera.</p>
+                        `;
+                    });
+            }
+            // Llamar a la función para cargar la cabecera
+            loadHeader();
+    </script>
+
+    <script>
+        function loadFoot() {
+            // Intentar cargar el archivo de pie
+            fetch('pie.html')
+                .then(response => {
+                    // Verificar si la respuesta es exitosa
+                    if (!response.ok) {
+                        throw new Error(`Error al cargar el pie de página: ${response.statusText}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    // Insertar el contenido de header.html en el div
+                    document.getElementById('miPie').innerHTML = data;
+                })
+                .catch(error => {
+                    // Manejar errores
+                    console.error('Hubo un problema al cargar el pie de página:', error);
+                    document.getElementById('miPie').innerHTML = `
+                        <p style="color: red;">Lo sentimos, hubo un error al cargar la cabecera.</p>
+                    `;
+                });
+        }
+        // Llamar a la función para cargar la cabecera
+        loadFoot();
+    </script>
+</body>
+</html>    

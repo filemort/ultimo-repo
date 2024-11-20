@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizar cookies</title>
+    <link rel="stylesheet" href="css/cabecera.css">
+    <link rel="stylesheet" href="css/personalizar.css">
+    <link rel="stylesheet" href="css/pie.css">
+</head>
+<body onload="document.getElementById('mensaje').value = ''">
+    <div id="miHeader"></div>
+    <main>
+        <div class="personalizar">
+            <p class="perTexto">
+                Utilizamos cookies propias y de terceros para obtener datos estadísticos de la navegación de nuestros usuarios y mejorar nuestros servicios. Si acepta o continúa navegando, consideramos que acepta su uso.
+            </p>
+            <button class="rechazar">RECHAZAR</button>
+            <button class="aceptar">ACEPTAR</button> 
+            <br><br>
+            <p class="perTexto1">
+                Puedes cambiar tus preferencias de cookies en cualquier momento si vuelves a la página de Personalizar cookies, a la que puedes acceder a través del Aviso de cookies. Para obtener más información sobre las cookies y cómo las usamos, consulta la página de 
+                <a href="cookies.html">Política de Cookies</a>.
+            </p>
+            <p class="perTitle">Cookies técnicas</p>
+            <p class="perTexto">
+                Son aquellas que permiten a los usuarios registrados navegar a través del sitio Web, del área restringida y a utilizar sus diferentes funciones, como por ejemplo, el sistema de comentarios o el buscador y no pueden ser desactivadas.
+            </p>
+            <p class="perTitle">Cookies sociales</p>
+            <p class="perTexto">
+                Son establecidas por las plataformas de redes sociales para permitir a los usuarios compartir contenido con sus amigos y redes.
+            </p>
+            <button class="activar">ACTIVAR</button>
+            <button class="desactivar">DESACTIVAR</button>
+            <br><br>
+        </div>
+        
+    </main> 
+    <div id="miPie"></div>
+    <script>
+        function loadHeader() {
+                // Intentar cargar el archivo de cabecera
+                fetch('cabecera.html')
+                    .then(response => {
+                        // Verificar si la respuesta es exitosa
+                        if (!response.ok) {
+                            throw new Error(`Error al cargar la cabecera: ${response.statusText}`);
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        // Insertar el contenido de header.html en el div
+                        document.getElementById('miHeader').innerHTML = data;
+                    })
+                    .catch(error => {
+                        // Manejar errores
+                        console.error('Hubo un problema al cargar la cabecera:', error);
+                        document.getElementById('miHeader').innerHTML = `
+                            <p style="color: red;">Lo sentimos, hubo un error al cargar la cabecera.</p>
+                        `;
+                    });
+            }
+            // Llamar a la función para cargar la cabecera
+            loadHeader();
+    </script>
+
+    <script>
+        function loadFoot() {
+            // Intentar cargar el archivo de pie
+            fetch('pie.html')
+                .then(response => {
+                    // Verificar si la respuesta es exitosa
+                    if (!response.ok) {
+                        throw new Error(`Error al cargar el pie de página: ${response.statusText}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    // Insertar el contenido de header.html en el div
+                    document.getElementById('miPie').innerHTML = data;
+                })
+                .catch(error => {
+                    // Manejar errores
+                    console.error('Hubo un problema al cargar el pie de página:', error);
+                    document.getElementById('miPie').innerHTML = `
+                        <p style="color: red;">Lo sentimos, hubo un error al cargar la cabecera.</p>
+                    `;
+                });
+        }
+        // Llamar a la función para cargar la cabecera
+        loadFoot();
+    </script>
+</body>
+</html>    

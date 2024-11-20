@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre nosotros</title>
+    <link rel="stylesheet" href="css/cabecera.css">
+    <link rel="stylesheet" href="css/nosotros.css">
+    <link rel="stylesheet" href="css/pie.css">
+</head>
+<body onload="document.getElementById('mensaje').value = ''">
+    <div id="miHeader"></div>
+    <main>
+        <div class="nosFondo">
+            <img class="nosImgFondo" src="multimedia/imagenes/nosImgFondo.jpg" alt="img.nosotros">
+        </div>
+        <p class="nosTitle">Conócenos</p>
+        <div class="nosStles">
+            <p class="nosSbt1">Dispalma se fundó en el año 1987 como distribuidora de todo tipo de papel así como de venta y servicio de equipos de impresión (por aquel entonces, en su mayoría copyprinter). Poco tiempo después, allá por el año 92, con el auge de la informática, no lo dudamos y nos sumamos a este apasionante mundo. <br>
+            Desde entonces ofrecemos a nuestros clientes un servicio especializado y de calidad en todo el equipamiento que una empresa pueda necesitar desde el punto de vista informático y suministros de oficina (impresoras, audiovisuales, material de papelería, papel, encuadernadoras, plastificadoras…)Al servicio de la empresa desde 1987</p>
+            <p class="nosSbt2">Nos ocupamos de todo, para que tú no te preocupes.</p>
+            <p class="nosSbt1">Nuestro mayor compromiso es la satisfacción de nuestros clientes y que en el día a día tengan la tranquilidad de que sus equipos estarán a pleno rendimiento. <br>
+            Déjate asesorar por nuestros expertos a la hora de adquirir nuevo equipamiento para tu empresa. Más de 30 años de experiencia nos avalan.* Somos especialistas en trabajos para centros escolares*</p>
+        </div>
+    </main> 
+    <div class="preBoton">
+        <button class="nosBoton">   
+            <a class="nosInfoBoton" href="contacto.html">+ INFO: Contáctanos</a>
+        </button>    
+    </div>
+    <div id="miPie"></div>
+    <script>
+        function loadHeader() {
+                // Intentar cargar el archivo de cabecera
+                fetch('cabecera.html')
+                    .then(response => {
+                        // Verificar si la respuesta es exitosa
+                        if (!response.ok) {
+                            throw new Error(`Error al cargar la cabecera: ${response.statusText}`);
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        // Insertar el contenido de header.html en el div
+                        document.getElementById('miHeader').innerHTML = data;
+                    })
+                    .catch(error => {
+                        // Manejar errores
+                        console.error('Hubo un problema al cargar la cabecera:', error);
+                        document.getElementById('miHeader').innerHTML = `
+                            <p style="color: red;">Lo sentimos, hubo un error al cargar la cabecera.</p>
+                        `;
+                    });
+            }
+            // Llamar a la función para cargar la cabecera
+            loadHeader();
+    </script>
+
+    <script>
+        function loadFoot() {
+            // Intentar cargar el archivo de pie
+            fetch('pie.html')
+                .then(response => {
+                    // Verificar si la respuesta es exitosa
+                    if (!response.ok) {
+                        throw new Error(`Error al cargar el pie de página: ${response.statusText}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    // Insertar el contenido de header.html en el div
+                    document.getElementById('miPie').innerHTML = data;
+                })
+                .catch(error => {
+                    // Manejar errores
+                    console.error('Hubo un problema al cargar el pie de página:', error);
+                    document.getElementById('miPie').innerHTML = `
+                        <p style="color: red;">Lo sentimos, hubo un error al cargar la cabecera.</p>
+                    `;
+                });
+        }
+        // Llamar a la función para cargar la cabecera
+        loadFoot();
+    </script>
+</body>
+</html>    

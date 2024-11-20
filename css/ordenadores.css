@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    overflow-x: hidden;
+    width: 100%;
+}   
+.ordHeader{
+    position: relative;
+    width: 100%;
+    height: 40rem;
+    background-image:url("../multimedia/imagenes/ordFondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+}
+.ordTitle{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: -23rem;
+    text-align: center;
+}
+.ordTitulos{
+    display: flex;
+    justify-content: space-evenly;
+}
+.ordSubt{
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+.ordLista{
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+}
+.ordListSty{
+    font-size: 1.3rem;
+    list-style: disc;
+}
+.ordTipos{
+    margin-top: 4rem;
+    display:grid;
+    grid-template-areas: 
+        "sobr lapt serv"
+        "moni sist soft"
+        ".    butt   . ";
+    ;    
+    padding: 6rem;
+    gap: 5rem;
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+
+}
+.ordImg{
+    width: 15rem;
+    height: 18rem;
+}
+.ordSobre{
+    grid-area: sobr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ordLaptop{
+    grid-area: lapt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ordServer{
+    grid-area: serv;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ordMonitor{
+    grid-area: moni;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ordSistema{
+    grid-area: sist;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30rem;
+}
+.ordSoft{
+    grid-area: soft;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30rem;
+}
+.ordTtlCmp{
+    margin-top: .5rem;
+    font-size: 1.2rem;
+}
+.ordBoton{
+    grid-area: butt;
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    box-shadow: .3rem .3rem .2rem .2rem rgb(150, 127, 179);
+    height: 2rem;
+    width: 15rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 7rem;
+    color: black;
+}
+.ordBoton:hover{
+    background: aquamarine;
+
+}
+
+@media (max-width: 600px){
+    .ordHeader{
+        height: 45rem;
+    }
+    .ordTitle{
+        margin-top: -30rem;
+        font-size: 2rem;
+        margin-left: -.5rem;
+    }
+    .ordTitulos{
+        flex-direction: column;
+    }
+    .ordSubt{
+        padding-left: 1.4rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .ordLista{
+        padding-left: 1.8rem;
+    }
+    .ordListSty{
+        font-size: 1.2rem;
+    }
+    .ordTipos{
+        display: flex;
+        flex-direction: column;
+        margin-top: -2rem;
+
+    }
+    .ordImg{
+        width: 10rem;
+        height: 13rem;
+    }
+    .ordTtlCmp{
+        font-size: 1rem;
+    }
+    .ordBoton{
+        margin-left: 2.2rem;        
+    }
+}

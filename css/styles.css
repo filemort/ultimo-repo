@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    overflow-x: hidden;
+}
+/* -------> AREA MAIN (GRID) <-------*/
+main{
+    position: relative;
+    display:grid;
+    grid-template-areas:
+        "teapr teapr teapr "
+        "mainf orden redes"
+        "impre audio mater";
+    gap: 10px;    
+    text-align: center;
+    gap: .5rem;
+    background-color:burlywood;
+}
+.teapr{
+    grid-area: teapr;
+    width:100%;
+    height: 25rem;
+    background-image:url("../multimedia/imagenes/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 11rem;
+
+}
+.img1{
+    grid-area: mainf;
+}
+.img2{
+    grid-area: orden;
+}
+.img3{
+    grid-area: redes;
+}
+.img4{
+    grid-area: impre;
+}
+.img5{
+    grid-area: audio;
+}    
+.img6{
+    grid-area: mater;
+}
+.teaprTxt1{
+    font-size: 4rem;
+    margin-top: 1rem;
+}
+.teaprTxt2{
+    font-size: 1rem;
+    padding-top: 2rem;
+}
+.teaprTxt3{
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+
+.servImg{
+    width: 22rem;
+    height: 15rem;
+    border-radius: 2rem;
+    border: 4px solid rgb(10, 23, 168);
+    border-style:outset;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+.servImg:hover{
+    border-style: dashed;
+    border-color: chocolate;
+}
+.imgP1{
+    color: blue;
+    font-weight: bold;
+}
+
+@media (max-width: 600px){
+    main{
+        grid-template-areas:
+            "teapr"
+            "mainf"
+            "orden"
+            "redes"
+            "impre"
+            "audio"
+            "mater";
+    }
+    .teapr{
+        height: 30rem;
+    }
+}

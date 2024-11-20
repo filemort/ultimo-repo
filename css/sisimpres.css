@@ -1,0 +1,418 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style:none;
+}
+body{
+    overflow-x: hidden;
+}    
+
+.impresFondo{
+    position: relative;
+    width: 100%;
+    height: 40rem;
+    background-image:url("../multimedia/imagenes/sisimpres.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    width:100%;
+}
+.mpfTitles{
+    text-align: center;
+    margin-top: -18rem;
+    height: 20rem;
+}
+.mpfTitle{
+    font-size: 4rem;
+    width: 100%;
+    font-weight: bold;
+}
+.mpfSbt1{
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.mpfHr{
+    width: 60rem;
+    margin-left: 15rem;
+}
+.mpfSbt2{
+    font-size: 1.5rem;
+    text-align: center;
+    color:grey
+}
+.container1{
+    display: grid;
+    justify-content: center;
+    height: 40rem;
+    gap: 0 8rem ;
+    grid-template-areas: 
+        "audit copia sstt"
+        "equip consu impr"    
+    ;
+}
+.art1{
+    grid-area: audit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.art2{
+    grid-area: copia;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.artHover{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: -1.9rem;
+}
+.artHover:hover .ct1Titles{
+    color: blue;
+}
+.art3{
+    grid-area: sstt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.art4{
+    grid-area: equip;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.art5{
+    grid-area: consu;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.art6{
+    grid-area: impr;
+    width: 15rem;
+    border-radius: 20px;
+    margin-top: -4rem;
+}
+.iconos{
+    width: 3rem;
+}
+.iconos:hover, .ct1Titles:hover{
+    color: blue;
+}
+.ct1Titles{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-left: .8rem;
+    color:black;
+}
+.ct1Txt{
+    margin-top: 1rem;
+    line-height: 1.8rem;
+    text-align: justify;
+}
+/*     ----------------------------- AUDITORÍA ---------------------------------*/
+#auditoria{
+    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45rem;
+    padding-top: 5rem;
+}
+.audTtlStl{
+    display: flex;
+    flex-direction: column;
+    width: 38rem;
+    margin-left: 3rem;
+}
+.audTitle{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.audSubt{
+    margin-top: 2rem;
+    width: 38rem;
+    line-height: 2rem;
+    font-size: 1rem;
+}
+.audFoto{
+    width: 28rem;
+    height: 25rem;
+    border-radius: 20px;
+    border: .5rem solid lightgray;
+    margin-left: 12rem;
+}
+.cntAudit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    border-radius: 20rem;
+    box-shadow: .2rem .3rem;
+    margin-top: 2rem;
+    width: 17rem;
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.audInfo:hover{
+    color:chocolate;
+}
+
+/*     ----------------------------- COSTE POR COPIA ---------------------------------*/
+#pgoCopy{
+    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+    display: flex;
+    padding: 5rem;
+    justify-content: space-between;
+    height: 50rem;
+    padding-top: 13rem;
+}
+.pgoFoto{
+    height: 20rem;
+    border-radius: 20px;
+    border: .5rem solid lightgray;
+}
+.pgoTtlStl{
+    display: flex;
+    flex-direction: column;
+    max-width: 25rem;
+}
+.pgoTitle{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.pgoSubt{
+    margin-top: 1rem;
+    line-height: 2rem;
+    font-size: 1rem;
+}
+.pgoPagar{
+    align-self: center;
+    width: 30rem;
+    height: 25rem;
+    margin-top: -6rem;
+}
+.pgoTtlSt2{
+    display: flex;
+    flex-direction: column;
+    max-width: 25rem;
+}
+.pgoLista{
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+.miLista{
+    list-style: decimal;
+    list-style-position: inside;
+}
+.cntPgo{
+    display: flex;
+    justify-content: center;
+    border: 2px solid;
+    border-radius: 20rem;
+    box-shadow: .2rem .3rem;
+    margin-top: 2rem;
+    width: 24.7rem;
+    height: 2.5rem;
+    align-items: center;
+}
+.cntPgo:hover{
+    background-color: aquamarine;
+}
+.pgoInfo{
+    display: self;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/*     ------------------------ FOTOCOPIADORAS Y MULTIFUNCIONALES -----------------------------*/
+#impreMulti{
+    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+    display: flex;
+    padding: 5rem;
+    justify-content:space-evenly;
+    height: 50rem;
+    padding-top: 12rem;
+}
+.imFoto{
+    height: 33rem;
+    border-radius: 20px;
+    border: .5rem solid lightgray;
+}
+.imTtlStl{
+    display: flex;
+    flex-direction: column;
+    max-width: 25rem;
+}
+.imTitle{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.imSubt{
+    margin-top: 1rem;
+    line-height: 2rem;
+    font-size: 1rem;
+}
+.imBoton{
+    display: self;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    border: 2px solid;
+    border-radius: 20rem;
+    box-shadow: .2rem .3rem;
+
+}
+.imBoton:hover{
+    background-color: aquamarine;
+}
+@media (max-width: 600px){
+    .impresFondo{
+        height: 35rem;
+    }
+    .mpfTitle{
+        font-size: 2rem;
+    }
+    .mpfSbt1{
+        font-size: 1.7rem;
+    }
+    .mpfHr{
+        margin-left: 2rem;
+        width: 25rem;
+    }
+    .mpfSbt2{
+        width: 29rem;
+        font-size: 1.2rem;
+    }
+    .container1{
+        display: flex;
+        flex-direction: column;
+        height: 80rem;
+    }
+    .artMargin{
+        margin-bottom: 2rem;
+    }
+    .art6{
+        width: 8rem;
+        margin-top: 1rem;
+        margin-left: 10rem;
+    }
+    #auditoria{
+        flex-direction: column;
+        height: auto;
+    }
+    .audTitle{
+        font-size: 1.2rem;
+        margin-left: 2.7rem;
+        margin-top: 8rem;
+    }
+    .audSubt{
+        font-size: .8rem;
+        width: 29.5rem;
+        margin-left: 2.7rem;
+    }
+    .audInfo{
+        font-size: .6em;
+    }
+    .cntAudit{
+        width: 12rem;
+        margin-left: 2.8rem;
+        margin-top: 3rem;
+    }
+    .audFoto{
+        width: 13rem;
+        height: 10rem;
+        margin-left: 14rem;
+        margin-top: -7rem
+    }
+
+    #pgoCopy{
+        flex-direction: column;
+        align-items: center;
+        margin-left: -4rem;
+        width: 34.3rem;
+        height: auto;
+    }
+    .pgoFoto{
+        order: 4;
+        height: 10rem;
+        margin-left: 17rem;
+        margin-top: -6rem;
+    }
+    .pgoTitle{
+        font-size: 1.2rem;
+    }
+    .pgoSubt{
+        font-size: .8rem;
+        text-align: justify;
+        width: 29rem;
+    }
+    .pgoTtlStl{
+        order: 1;
+    }
+    .pgoTtlSt2{
+        order:2;
+    }
+    .miLista{
+        font-size: .8rem;
+    }
+    .cntPgo{
+        order:3;
+        margin-top: 4rem;
+        width: 12rem;
+    }
+    .pgoInfo{
+        font-size: .6rem;
+    }
+
+    #impreMulti{
+        flex-direction: column;
+        margin-left: -4.8rem;
+    }
+    .imFoto{
+        height: 10rem;
+        width: 15rem;
+        order: 4;
+        margin-left: 14rem;
+        margin-top: -6.7rem;
+
+    }
+    .imTitle{
+        font-size: 1.2rem;
+    }
+    .imTtlStl{
+        order: 1;
+        text-align: justify;
+    }
+    .imSubt{
+        font-size: .8rem;
+        width: 29rem;
+    }
+    .imBoton{
+        width: 12rem;
+        order: 3;
+        margin-top: 5rem;
+
+    }
+    .imInfo{
+        font-size: .9rem;
+    }
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenadores</title>
+    <link rel="stylesheet" href="css/cabecera.css">
+    <link rel="stylesheet" href="css/ordenadores.css">
+    <link rel="stylesheet" href="css/pie.css">
+</head>
+<body onload="document.getElementById('mensaje').value = ''">
+    <div id="miHeader"></div>
+    <div class="ordHeader"></div>
+    <p class="ordTitle">Ordenadores, Sistemas y Apps</p>
+    <div class="ordTitulos">
+            <article class="ordGrpOrd">
+                <p class="ordSubt">Hardware (PC's y varios)</p>
+                <ol class="ordLista">
+                    <li class="ordListSty">Asesoramiento previo/post venta</li>
+                    <li class="ordListSty">Venta de equipos de sobremesa, laptops, servers y pantallas</li>
+                    <li class="ordListSty">Asistencia técnica in-situ y remota</li>
+                </ol>
+            </article>
+            <article class="ordGrpOs">
+                <p class="ordSubt">Software (OS y App's)</p>
+                <ol class="ordLista">
+                    <li class="ordListSty">Asesoramiento previo/post venta</li>
+                    <li class="ordListSty">Venta, instalación y configuración de OS y Apps</li>
+                    <li class="ordListSty">Asistencia técnica in-situ y remota</li>
+                </ol> 
+            </article>
+        </div>    
+    </div> 
+    <div class="ordTipos">
+        <article class="ordSobre">
+            <img class="ordImg" src="multimedia/imagenes/ordImgsobremesa.png" alt="img.sobremesa">
+            <p class="ordTtlCmp">SOBREMESAS</p>
+        </article>
+        <article class="ordLaptop">
+            <img class="ordImg" src="multimedia/imagenes/ordImglaptop.png" alt="img.laptop">
+            <p class="ordTtlCmp">PORTÁTILES</p>
+        </article>
+        <article class="ordServer">
+            <img class="ordImg" src="multimedia/imagenes/ordImgservidor.png" alt="img.servidor">
+            <p class="ordTtlCmp">SERVIDORES</p>
+        </article>
+        <article class="ordMonitor">
+            <img class="ordImg" src="multimedia/imagenes/ordImgmonitor.png" alt="img.monitor">
+            <p class="ordTtlCmp">MONITORES</p>
+        </article>
+        <article class="ordSistema">
+            <img class="ordImg"src="multimedia/imagenes/ordImgsistemas.png" alt="img.sistema">
+            <p class="ordTtlCmp">SISTEMAS OPERATIVOS</p>
+
+        </article>
+        <article class="ordSoft">
+            <img class="ordImg"src="multimedia/imagenes/ordImgsoftware.png" alt="img.software">
+            <p class="ordTtlCmp">SOFTWARE VARIO</p>
+        </article>
+        <button class="ordBoton" >   
+            <a class="ordInfoBoton" href="contacto.html">+ INFO: Contáctanos</a>
+        </button>    
+    </div>
+
+    <div id="miPie"></div>
+    <script>
+        function loadHeader() {
+                // Intentar cargar el archivo de cabecera
+                fetch('cabecera.html')
+                    .then(response => {
+                        // Verificar si la respuesta es exitosa
+                        if (!response.ok) {
+                            throw new Error(`Error al cargar la cabecera: ${response.statusText}`);
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        // Insertar el contenido de header.html en el div
+                        document.getElementById('miHeader').innerHTML = data;
+                    })
+                    .catch(error => {
+                        // Manejar errores
+                        console.error('Hubo un problema al cargar la cabecera:', error);
+                        document.getElementById('miHeader').innerHTML = `
+                            <p style="color: red;">Lo sentimos, hubo un error al cargar la cabecera.</p>
+                        `;
+                    });
+            }
+            // Llamar a la función para cargar la cabecera
+            loadHeader();
+    </script>
+
+    <script>
+        function loadFoot() {
+            // Intentar cargar el archivo de pie
+            fetch('pie.html')
+                .then(response => {
+                    // Verificar si la respuesta es exitosa
+                    if (!response.ok) {
+                        throw new Error(`Error al cargar el pie de página: ${response.statusText}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    // Insertar el contenido de header.html en el div
+                    document.getElementById('miPie').innerHTML = data;
+                })
+                .catch(error => {
+                    // Manejar errores
+                    console.error('Hubo un problema al cargar el pie de página:', error);
+                    document.getElementById('miPie').innerHTML = `
+                        <p style="color: red;">Lo sentimos, hubo un error al cargar la cabecera.</p>
+                    `;
+                });
+        }
+        // Llamar a la función para cargar la cabecera
+        loadFoot();
+    </script>
+</body>
+</html>
