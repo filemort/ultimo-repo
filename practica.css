@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+.containerOld{
+    max-width: 100%;
+    background-color:aquamarine;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));; 
+    grid-template-areas: 
+            "titulo titulo titulo"  
+            "primer segundo tercero"
+            "pie pie pie";
+    gap: 2rem;
+    padding: 2rem;
+}
+.container{
+    max-width: 100%;
+    width: 100%;
+    background-color:aquamarine;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto; 
+    grid-template-areas: 
+            "titulo titulo titulo"  
+            "primer segundo tercero"
+            "pie pie pie";
+    gap: 1rem;
+    padding: 1rem;
+}
+.title_Container{
+    grid-area: titulo;
+    text-align: center;
+    font-size: 2rem;
+    border: .5rem solid blue;
+    background-color: coral;
+}
+.bloque_1 {
+    grid-area: primer;
+}
+
+.bloque_2 {
+    grid-area: segundo;
+}
+
+.bloque_3 {
+    grid-area: tercero;
+}
+.bloque_1, .bloque_2, .bloque_3 {
+    font-size: 1rem;
+    text-align: justify;
+    border: 0.5rem solid blue;
+    background-color: white;
+    color: black;
+    padding: 1rem;
+}
+
+.title_Bloque{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-decoration:underline black .2rem dashed;
+   
+}
+
+footer{
+    grid-area: pie;
+    border: .5rem solid blue;
+    color: black;
+    background-color: coral;
+    font-size: 2rem;
+    text-align: center;
+}
