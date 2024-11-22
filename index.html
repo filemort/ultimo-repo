@@ -3,45 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Práctica</title>
-    <link rel="stylesheet" href="css/practica.css">
+    <title>Dispalma</title>
+    <link rel="stylesheet" href="css/cabecera.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pie.css">
+
+    <!-- script para uso de EMAILJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- script pare el envío con EMAILJS sin campo mensaje -->
+    <script src="script/sin_mensaje.js"></script>
 </head>
 <body>
-    <div class="container">
-        <p class="title_Container">Página de prueba</p>
-        <section class="bloque_1">
-            <p class="title_Bloque">Primer bloque</p>
-            <p class="text_B1">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus optio ullam saepe iste amet inventore, exercitationem repudiandae suscipit. Ipsa, tempore quas. Perferendis modi, magni tenetur eveniet porro corporis accusantium beatae!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat praesentium id dolorem nulla enim numquam adipisci maiores beatae ea molestias voluptate aliquam error quae vel repudiandae, doloremque vero temporibus nihil?
-                Mollitia iusto optio nobis? Minima facere illo obcaecati, nesciunt in odio doloribus, ipsum laudantium commodi error vitae ipsam maxime, quo optio ab excepturi dolorum. Delectus modi voluptate facere doloribus sapiente.
-                Asperiores consequatur aut mollitia repellat saepe recusandae ad, hic cumque, eum ipsum corrupti exercitationem dolorem optio. Illo magnam soluta beatae aperiam, quibusdam porro tempore culpa quia corporis nihil tempora assumenda?
-                Alias quasi tempora ut! Suscipit qui illum atque aperiam obcaecati unde blanditiis, pariatur non ducimus. Exercitationem voluptatem temporibus commodi, nihil quibusdam unde illum, autem at quaerat fuga culpa molestias optio!
-            </p>
-        </section>
-        <section class="bloque_2">
-            <p class="title_Bloque">Segundo bloque</p>
-            <p class="text_B1">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi neque consequuntur, temporibus harum, eum culpa numquam reprehenderit accusamus odit quae modi! Ex vitae labore ratione nobis suscipit atque? Laboriosam, beatae?
-                Ducimus numquam iure aspernatur maiores sit molestias dolorem. Beatae dolorum quo enim, doloribus nesciunt, consectetur quasi distinctio quos illum ratione sunt vero, veritatis eveniet ducimus eligendi? Illo assumenda quidem commodi.
-                Praesentium voluptate sequi iure, quod ipsum error quas? Esse animi quis deserunt sit impedit reiciendis nobis ratione iusto totam sequi, voluptas, dolor possimus fuga odit veniam. Reprehenderit vero consequuntur culpa.
-                Quasi vitae animi dolore maiores nemo odit, quidem qui a. Dolorem minus sunt amet, blanditiis quod eveniet, odit aut rem animi accusantium esse? Aspernatur, aliquid at repudiandae dolorum laboriosam possimus.
-            </p>    
-        </section>
-        <section class="bloque_3">
-            <p class="title_Bloque">Tercer bloque</p>
-            <p class="text_B3">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt corporis facilis reprehenderit nihil officia nemo laboriosam qui in, quam eos, architecto dolores aliquid, debitis eveniet voluptatibus. Id repellat modi earum.
-                Placeat omnis alias dolores unde dolorem optio ducimus doloremque? Accusamus nam ut quasi quae sit? Sapiente at nulla corrupti, eveniet architecto facilis quaerat doloribus atque repellat quasi officia debitis laboriosam!
-                Repudiandae sed corporis tenetur nesciunt minus quas deserunt molestiae laborum doloremque delectus atque itaque ea maxime voluptas distinctio commodi a, deleniti quisquam, magnam ipsum repellendus illum dolores tempore. Molestias, delectus.
-                Error dolorum obcaecati necessitatibus nulla ut perferendis amet nobis, quisquam culpa? Enim, veniam. Placeat, accusamus est? Ullam nostrum, libero illo magni doloribus expedita eveniet officia, eos sit enim consequuntur facere.
-                Eligendi veritatis optio inventore! Fugit magnam necessitatibus reprehenderit neque? Accusantium assumenda, molestiae esse vel adipisci illo cumque velit. Ratione voluptates recusandae vitae tempora, ex odit ipsa eum provident necessitatibus fuga.
-            </p>
-        </section>
-        <footer>
-            <p>Área de footer</p>
-        </footer>
-    </div>
-    
+    <div id="miHeader"></div>
+    <main>
+        <div class="teapr">
+            <p class="teaprTxt1">Tu empresa a pleno <br>rendimiento</p>
+            <p class="teaprTxt2">Nos ocupamos de que tu equipamiento esté siempre optimizado.</p>
+            <p class="teaprTxt3">¿En que podemos ayudarte?</p>
+        </div>
+        <div class="img1">
+            <a href="mantto.html"><img class="servImg" src="multimedia/imagenes/mant_informatico.jpg" alt="img.mant."></a>
+            <a href="mantto.html">
+                <p class="imgP1">Mantenimiento informático</p>
+            </a>
+            <p class="imgP2">El mejor servicio para mantener tus<br>equipos actualizados y en<br>funcionamiento.</p>
+        </div>    
+        <div class="img2">
+            <a href="ordenadores.html"><img class="servImg" src="multimedia/imagenes/computers.jpg" alt="img.computer"><a href=""></a>
+            <a href="ordenadores.html">
+                <p class="imgP1">Ordenadores</p>
+            </a>
+            <p class="imgP2">Venta y reparación de ordenadores<br>portátiles, sobremesa y servidores.</p>
+        </div>
+        <div class="img3">    
+            <a href="redes.html"><img class="servImg" src="multimedia/imagenes/redes.jpg" alt="img.redes"><a href=""></a>
+            <a href="redes.html">
+                <p class="imgP1">Redes y comunicaciones</p>
+            </a>    
+            <p class="imgP2">Cableado y dispositivos de red,<br>armarios rack, megafonía…</p>
+        </div>
+        <div class="img4">
+            <a href="sisimpres.html"><img class="servImg" src="multimedia/imagenes/printer.jpg" alt="img.impresora"><a href=""></a>
+            <a href="sisimpres.html">
+                <p class="imgP1">Impresión</p>
+            </a>    
+            <p class="imgP2">Asesoramiento profesional para<br>optimizar los costes de impresión.</p>
+        </div>
+        <div class="img5">    
+            <a href="audiovisual.html"><img class="servImg" src="multimedia/imagenes/audiovisuales.jpg" alt="img.audiovis."><a href=""></a>
+            <a href="audiovisual.html">
+                <p class="imgP1">Audiovisuales</p>
+            </a>   
+            <p class="img5P2">Todo lo que necesitas para tu sala de<br>comunicaciones.</p>
+        </div>
+        <div class="img6">
+            <a href="oficina.html"><img class="servImg" src="multimedia/imagenes/gadgets.jpg" alt="img.mat.oficina"><a href=""></a>
+            <a href="oficina.html">
+                <p class="imgP1">Material de oficina</p>
+            </a>    
+            <p class="img6P2">Equipos y suministros de papelería para<br>tu empresa o centro educativo.</p>
+        </div>
+    </main>
+    <div id="miPie"></div>
+    <script>
+        function loadHeader() {
+                // Intentar cargar el archivo de cabecera
+                fetch('cabecera.html')
+                    .then(response => {
+                        // Verificar si la respuesta es exitosa
+                        if (!response.ok) {
+                            throw new Error(`Error al cargar la cabecera: ${response.statusText}`);
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        // Insertar el contenido de header.html en el div
+                        document.getElementById('miHeader').innerHTML = data;
+                    })
+                    .catch(error => {
+                        // Manejar errores
+                        console.error('Hubo un problema al cargar la cabecera:', error);
+                        document.getElementById('miHeader').innerHTML = `
+                            <p style="color: red;">Lo sentimos, hubo un error al cargar la cabecera.</p>
+                        `;
+                    });
+            }
+            // Llamar a la función para cargar la cabecera
+            loadHeader();
+    </script>
+
+    <script>
+        function loadFoot() {
+            // Intentar cargar el archivo de pie
+            fetch('pie.html')
+                .then(response => {
+                    // Verificar si la respuesta es exitosa
+                    if (!response.ok) {
+                        throw new Error(`Error al cargar la cabecera: ${response.statusText}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    // Insertar el contenido de header.html en el div
+                    document.getElementById('miPie').innerHTML = data;
+                })
+                .catch(error => {
+                    // Manejar errores
+                    console.error('Hubo un problema al cargar el pie de página:', error);
+                    document.getElementById('miPie').innerHTML = `
+                        <p style="color: red;">Lo sentimos, hubo un error al cargar la cabecera.</p>
+                    `;
+                });
+        }
+        // Llamar a la función para cargar la cabecera
+        loadFoot();
+    </script>
 </body>
 </html>
